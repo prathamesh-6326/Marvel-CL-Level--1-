@@ -1,4 +1,4 @@
-<img width="1600" height="850" alt="image" src="https://github.com/user-attachments/assets/282fd987-e5a9-475f-b685-61dbd6b91e9d" /># Marvel-CL-Level--1-
+# Marvel-CL-Level--1-
 ## Task 1 - Git Practice
 Learning Git basics for Marvel UVCE ClCY Level 1
 

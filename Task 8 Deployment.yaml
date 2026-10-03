@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: s3-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: s3-demo
+  template:
+    metadata:
+      labels:
+        app: s3-demo
+    spec:
+      containers:
+        - name: app
+          image: amazon/aws-cli:latest
+          command: ["/bin/sh", "-c"]
+          args:
+            - |
+              while true; do
+                echo "=== $(date) ==="
+                echo "APP_MODE=$APP_MODE"
+                echo "--- /config/app.properties ---"
+                cat /config/app.properties
+                echo "--- Listing s3://$S3_BUCKET_NAME ---"
+                aws s3 ls s3://$S3_BUCKET_NAME && echo "S3 ACCESS OK" || echo "S3 ACCESS FAILED"
+                sleep 60
+              done
+          envFrom:
+            - configMapRef:
+                name: app-config
+          env:
+            - name: AWS_ACCESS_KEY_ID
+              valueFrom:
+                secretKeyRef:
+                  name: aws-credentials
+                  key: AWS_ACCESS_KEY_ID
+            - name: AWS_SECRET_ACCESS_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: aws-credentials
+                  key: AWS_SECRET_ACCESS_KEY
+          volumeMounts:
+            - name: config-volume
+              mountPath: /config
+              readOnly: true
+      volumes:
+        - name: config-volume
+          configMap:
+            name: app-config
+            items:
+              - key: app.properties
+                path: app.properties

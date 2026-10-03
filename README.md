@@ -273,18 +273,63 @@ Successfully wrote a Pod manifest for Nginx, applied it to a Kubernetes cluster,
 ### What is this task?
 IAM controls who can do what in AWS (users, groups, roles and policies), and the AWS CLI lets you work with S3 from the terminal. This task creates an IAM user with S3 access, configures the CLI, and manages a bucket and its files.
 
-### What I Did
+Flow: IAM user + policy → access key → aws configure → AWS CLI → S3 bucket (create, upload, list, download, delete)
 
+### IAM Concepts
+| Concept | Meaning |
+|---|---|
+| *User* | A long-term identity for a person or app, with its own access keys |
+| *Group* | A collection of users that share the same permissions |
+| *Role* | An identity assumed temporarily, with no permanent keys |
+| *Policy* | A JSON document that allows or denies actions on resources |
+| *Least privilege* | Give only the permissions needed for the job, nothing more |
+
+### What I Did
+- Created an IAM policy s3-task6-policy that allows only bucket and object actions on one bucket
+- Created an IAM user uploader-t-6, attached the policy and generated an access key
+- Configured the AWS CLI with aws configure and verified the identity with aws sts get-caller-identity
+- Created the S3 bucket YOUR_BUCKET in ap-south-1 from the CLI
+- Uploaded task6-test.txt, listed the bucket, downloaded the file and checked its content
+- Ran aws s3 ls without a bucket and got AccessDenied, confirming the policy restricts the user to one bucket
+- Deleted the object from the bucket
+
+### Source Code
+| File | Purpose | Link |
+|---|---|---|
+| policy.json | Least-privilege IAM policy for one bucket | [policy.json](https://github.com/prathamesh-6326/Marvel-CL-Level--1-/blob/main/task6/policy.json) |
 
 ### Commands Used
 
+| Command | What it does |
+|---|---|
+| aws configure | Save the access key, secret, region and output format |
+| aws sts get-caller-identity | Verify the CLI connects to AWS and show which user it is using |
+| aws s3 mb s3://YOUR_BUCKET --region ap-south-1 | Create the bucket |
+| aws s3 cp task6-test.txt s3://YOUR_BUCKET/ | Upload a file |
+| aws s3 ls s3://YOUR_BUCKET/ | List the objects in the bucket |
+| aws s3 cp s3://YOUR_BUCKET/task6-test.txt downloaded-test.txt | Download the file |
+| aws s3 ls | Try to list all buckets (denied by the policy) |
+| aws s3 rm s3://YOUR_BUCKET/task6-test.txt | Delete the object |
+
+### Key Concepts Learned
+- *AWS CLI profile:* aws configure stores credentials in ~/.aws/credentials, and every CLI call uses them
+- *s3 mb / cp / ls / rm:* Create a bucket, copy files to or from S3, list contents, and delete objects
+- *Resource ARNs:* The bucket ARN covers bucket-level actions like ListBucket, and bucket/* covers object actions like PutObject
+- *Explicit scope:* The user cannot list other buckets, because the policy never allowed s3:ListAllMyBuckets
+
+### Security Notes
+- A dedicated IAM user with a least-privilege policy was used, not root credentials
+- Access keys were never committed to GitHub or shown in screenshots
+- The access key should be deleted after the lab
 
 ### Screenshot
 ![]
 (<img width="1600" height="665" alt="Image" src="https://github.com/user-attachments/assets/5579ccc4-8cc6-42da-b76d-3fb6ab98bb73" />)
 ![]
 (<img width="1600" height="900" alt="Image" src="https://github.com/user-attachments/assets/35989fac-f72a-4284-bd3a-6ad921a86985" />)
+
 ### Final Outcome
+Successfully created a least-privilege IAM user, configured the AWS CLI, created an S3 bucket from the command line, and uploaded, listed, downloaded and deleted a file. The AccessDenied on listing all buckets confirmed the policy works as intended.
 
 
 ---

@@ -274,16 +274,18 @@ Successfully wrote a Pod manifest for Nginx, applied it to a Kubernetes cluster,
 IAM controls who can do what in AWS (users, groups, roles and policies), and the AWS CLI lets you work with S3 from the terminal. This task creates an IAM user with S3 access, configures the CLI, and manages a bucket and its files.
 
 ### What I Did
-_To be added after the Task 6 screenshots are checked._
+
 
 ### Commands Used
-_To be added._
+
 
 ### Screenshot
-![](<img width="1600" height="665" alt="Image" src="https://github.com/user-attachments/assets/5579ccc4-8cc6-42da-b76d-3fb6ab98bb73" />)
-![](<img width="1600" height="900" alt="Image" src="https://github.com/user-attachments/assets/35989fac-f72a-4284-bd3a-6ad921a86985" />)
+![]
+(<img width="1600" height="665" alt="Image" src="https://github.com/user-attachments/assets/5579ccc4-8cc6-42da-b76d-3fb6ab98bb73" />)
+![]
+(<img width="1600" height="900" alt="Image" src="https://github.com/user-attachments/assets/35989fac-f72a-4284-bd3a-6ad921a86985" />)
 ### Final Outcome
-_To be added._
+
 
 ---
 

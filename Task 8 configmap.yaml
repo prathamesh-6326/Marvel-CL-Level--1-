@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+data:
+  APP_MODE: "production"
+  S3_BUCKET_NAME: "my-bucket"
+  AWS_DEFAULT_REGION: "ap-south-1"
+  app.properties: |
+    log.level=info
+    feature.s3.enabled=true

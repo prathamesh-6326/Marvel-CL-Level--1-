@@ -41,8 +41,8 @@ Learning Git basics for Marvel UVCE ClCY Level 1
 - **Cherry-pick:** Takes one specific commit from history without taking everything else
 
 ### Screenshot
-](<img width="2311" height="1657" alt="Image" src="https://github.com/user-attachments/assets/810f5de1-21a3-4257-bb2f-713749f5c275" />)
-](<img width="2953" height="1422" alt="Image" src="https://github.com/user-attachments/assets/f92de00f-1eb6-4524-94ae-3222d0e00221" />)
+![](<img width="2311" height="1657" alt="Image" src="https://github.com/user-attachments/assets/810f5de1-21a3-4257-bb2f-713749f5c275" />)
+![](<img width="2953" height="1422" alt="Image" src="https://github.com/user-attachments/assets/f92de00f-1eb6-4524-94ae-3222d0e00221" />)
 
 ### Final Outcome
 Successfully practiced the complete Git workflow — from cloning a repository to branching, committing, pushing, opening a pull request, merging, reverting, and cherry-picking. Understood the purpose of each command and when to use it.
@@ -95,10 +95,11 @@ Think of it this way:
 - **Port Mapping (-p 8080:80):** Connects laptop's port 8080 to container's port 80 so the browser can reach it
 
 ### Screenshot
-]( <img width="1578" height="745" alt="Image" src="https://github.com/user-attachments/assets/992aa72a-941a-4663-8cc6-ab547935a017" />)
+![]( <img width="1578" height="745" alt="Image" src="https://github.com/user-attachments/assets/992aa72a-941a-4663-8cc6-ab547935a017" />)
 
-](<img width="2936" height="1573" alt="Image" src="https://github.com/user-attachments/assets/dd04e466-b835-49f9-a4b6-1d411d882fd2" />)
-](<img width="2936" height="1573" alt="Image" src="https://github.com/user-attachments/assets/3bfd2cdf-3923-4235-bc96-7ce6ddcb8f46" />)
+![](<img width="2936" height="1573" alt="Image" src="https://github.com/user-attachments/assets/dd04e466-b835-49f9-a4b6-1d411d882fd2" />)
+
+![](<img width="2936" height="1573" alt="Image" src="https://github.com/user-attachments/assets/3bfd2cdf-3923-4235-bc96-7ce6ddcb8f46" />)
 
 ### Final Outcome
 Successfully installed Docker, pulled the Nginx image, ran it as a container, accessed it from the browser, and managed the full container lifecycle — start, inspect, logs, stop.
@@ -153,12 +154,12 @@ Flow: `Dockerfile → docker build → image → docker run -p 8080:80 → Brows
 Container running and layer history:
 
 <img alt="Task 3 docker run, ps and history"
-  src="<<img width="1600" height="850" alt="Image" src="https://github.com/user-attachments/assets/59c94dbf-620c-4417-a927-6c0f3cf88d38" />>" />
+![](src="<<img width="1600" height="850" alt="Image" src="https://github.com/user-attachments/assets/59c94dbf-620c-4417-a927-6c0f3cf88d38" />>" />)
 
 App in the browser:
 
-<img alt="Task 3 browser localhost:8080" 
-  src="<https://github.com/prathamesh-6326/Report-images/issues/3#issuecomment-5968517173>" />
+![](<img alt="Task 3 browser localhost:8080" 
+  src="<https://github.com/prathamesh-6326/Report-images/issues/3#issuecomment-5968517173>" />)
 
 ### Final Outcome
 Successfully wrote a Dockerfile for the starter website, built the image, ran it as a container with port 8080 mapped to port 80, opened it in the browser, and inspected the image layers.
@@ -203,9 +204,10 @@ EC2 (Elastic Compute Cloud) is Amazon's service that lets you rent a computer th
 - **Web Server:** Nginx
 
 ### Screenshot
-](<img width="2943" height="1558" alt="Image" src="https://github.com/user-attachments/assets/d54561a8-7b79-40c3-99d6-3a912c1b468d" />)
-](<img width="2943" height="1558" alt="Image" src="https://github.com/user-attachments/assets/0d6e4df5-af0c-4f7e-bca9-cadc96a39cd1" />)
-](<img width="1578" height="745" alt="Image" src="https://github.com/user-attachments/assets/081ed54d-6720-4052-90d0-0ecd33c0bfa6" />)
+![](<img width="2943" height="1558" alt="Image" src="https://github.com/user-attachments/assets/d54561a8-7b79-40c3-99d6-3a912c1b468d" />)
+
+![](<img width="2943" height="1558" alt="Image" src="https://github.com/user-attachments/assets/0d6e4df5-af0c-4f7e-bca9-cadc96a39cd1" />)
+![](<img width="1578" height="745" alt="Image" src="https://github.com/user-attachments/assets/081ed54d-6720-4052-90d0-0ecd33c0bfa6" />)
 
 ### Final Outcome
 Successfully launched an EC2 instance, connected to it remotely via SSH, installed Nginx, and accessed the web server from the browser using the instance's public IP address.
@@ -262,6 +264,7 @@ Flow: `pod.yaml → kubectl apply → Pod (nginx) → get / describe / logs`
 
 ### Screenshot
 ![](<img width="1600" height="806" alt="Image" src="https://github.com/user-attachments/assets/4b16ea8d-a873-4904-a751-b12438cefa58" />)
+
 ![](<img width="1600" height="803" alt="Image" src="https://github.com/user-attachments/assets/6405cd9f-f692-441c-ae63-53409d552abb" />)
 ### Final Outcome
 Successfully wrote a Pod manifest for Nginx, applied it to a Kubernetes cluster, confirmed it was Running, and inspected it with `get`, `describe` and `logs`.
@@ -323,10 +326,9 @@ Flow: IAM user + policy → access key → aws configure → AWS CLI → S3 buck
 - The access key should be deleted after the lab
 
 ### Screenshot
-![]
-(<img width="1600" height="665" alt="Image" src="https://github.com/user-attachments/assets/5579ccc4-8cc6-42da-b76d-3fb6ab98bb73" />)
-![]
-(<img width="1600" height="900" alt="Image" src="https://github.com/user-attachments/assets/35989fac-f72a-4284-bd3a-6ad921a86985" />)
+![](<img width="1600" height="665" alt="Image" src="https://github.com/user-attachments/assets/5579ccc4-8cc6-42da-b76d-3fb6ab98bb73" />)
+
+![](<img width="1600" height="900" alt="Image" src="https://github.com/user-attachments/assets/35989fac-f72a-4284-bd3a-6ad921a86985" />)
 
 ### Final Outcome
 Successfully created a least-privilege IAM user, configured the AWS CLI, created an S3 bucket from the command line, and uploaded, listed, downloaded and deleted a file. The AccessDenied on listing all buckets confirmed the policy works as intended.
@@ -372,12 +374,13 @@ Flow: `Docker Hub image → Deployment (3 replicas) → ClusterIP / NodePort Ser
 
 ### Screenshot 
 ![](<img width="1600" height="384" alt="Image" src="https://github.com/user-attachments/assets/71cd30d2-cbc0-4778-bc9f-dcdb0065b086" />)
+
 ![](<img width="1600" height="773" alt="Image" src="https://github.com/user-attachments/assets/9dd17a43-164f-4470-ac7c-83396ecd6214" />)
+
 ### Final Outcome
 The application was deployed with multiple replicas, exposed internally (ClusterIP) and externally (NodePort), then scaled and updated with no downtime using `kubectl`.
 
 ---
-
 ## Task 8: Use Kubernetes Secrets and Environment Variables
 
 ### What is this task?
@@ -446,7 +449,9 @@ kubectl delete secret aws-credentials
 
 ### Screenshot
 ![](<img width="1600" height="769" alt="Image" src="https://github.com/user-attachments/assets/4e7f373a-050f-40a0-b0a6-ef5d3e19e598" />)
+
 ![](<img width="1600" height="800" alt="Image" src="https://github.com/user-attachments/assets/b7331616-ca79-45d8-b947-29db11c2ff54" />)
+
 ### Final Outcome
 A ConfigMap supplied non-sensitive settings as environment variables and a mounted file. A Secret supplied the AWS credentials through `secretKeyRef`, so they never appear in the Deployment manifest or the container image. The Pod logs confirmed that the app read its configuration and listed the S3 bucket using the injected credentials.
 

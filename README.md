@@ -158,8 +158,8 @@ Container running and layer history:
 
 App in the browser:
 
-![](<img alt="Task 3 browser localhost:8080" 
-  src="<https://github.com/prathamesh-6326/Report-images/issues/3#issuecomment-5968517173>" />)
+![]
+(<img width="702" height="512" alt="Image" src="https://github.com/user-attachments/assets/92f7cab2-bd01-4fa1-b94b-f217737f93cd" />)
 
 ### Final Outcome
 Successfully wrote a Dockerfile for the starter website, built the image, ran it as a container with port 8080 mapped to port 80, opened it in the browser, and inspected the image layers.
